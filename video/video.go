@@ -87,11 +87,13 @@ func (video *Video) Configure(fullscreen bool) {
 	var m *glfw.Monitor
 
 	if fullscreen {
-		m = glfw.GetMonitors()[settings.Current.VideoMonitorIndex]
-		vms := m.GetVideoModes()
-		vm := vms[len(vms)-1]
-		width = vm.Width
-		height = vm.Height
+		// m = glfw.GetMonitors()[settings.Current.VideoMonitorIndex]
+		// vms := m.GetVideoModes()
+		// vm := vms[len(vms)-1]
+		// width = vm.Width
+		// height = vm.Height
+		width = 1920
+		height = 1080
 	} else {
 		width = 384 * 2
 		height = 240 * 2
