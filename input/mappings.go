@@ -4,6 +4,9 @@ var mappings = `
 # Game Controller DB for SDL in 2.0.16 format
 # Source: https://github.com/gabomdq/SDL_GameControllerDB
 
+03000000412300003680000001010000,Arduino LLC Arduino Leonardo,platform:Linux,a:b0,b:b2,back:b6,start:b7,dpdown:+a1,dpright:+a0,dpup:-a1,dpleft:-a0,
+03000000412300003680000000010000,Arduino LLC Arduino Leonardo,platform:Mac OS X,a:b0,b:b2,back:b6,start:b7,dpdown:+a1,dpright:+a0,dpup:-a1,dpleft:-a0,
+
 # Windows
 03000000300f00000a01000000000000,3 In 1 Conversion Box,a:b2,b:b1,back:b9,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b6,leftstick:b10,lefttrigger:b4,leftx:a0,lefty:a1,rightshoulder:b7,rightstick:b11,righttrigger:b5,rightx:a3,righty:a2,start:b8,x:b3,y:b0,platform:Windows,
 03000000fa2d00000100000000000000,3dRudder Foot Motion Controller,leftx:a0,lefty:a1,rightx:a5,righty:a2,platform:Windows,
