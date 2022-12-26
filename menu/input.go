@@ -158,7 +158,7 @@ func indexed(list *entry, offset int) int {
 	return 0
 }
 
-var combo1, combo2 int
+var combo1, combo2, combo3 int
 
 // ProcessHotkeys checks if certain keys are pressed and perform corresponding actions
 func (m *Menu) ProcessHotkeys() {
@@ -182,8 +182,15 @@ func (m *Menu) ProcessHotkeys() {
 		combo2 = 0
 	}
 
+	// Third menu combo (Home button on 8BitDo N30 2.4g)
+	if input.NewState[0][libretro.DeviceIDJoypadDown] == 1 && input.NewState[0][libretro.DeviceIDJoypadSelect] == 1 {
+		combo3++
+	} else {
+		combo3 = 0
+	}
+
 	// Toggle the menu if ActionMenuToggle or the combo L3+R3 is pressed
-	if (input.Pressed[0][input.ActionMenuToggle] == 1 || combo1 == 1 || combo2 == 1) && state.CoreRunning {
+	if (input.Pressed[0][input.ActionMenuToggle] == 1 || combo1 == 1 || combo2 == 1 || combo3 == 1) && state.CoreRunning {
 		state.MenuActive = !state.MenuActive
 		state.FastForward = false
 		if state.MenuActive {
